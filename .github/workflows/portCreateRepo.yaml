@@ -19,7 +19,7 @@ jobs:
       ORG_NAME: Labtech-DevOps
     runs-on: ubuntu-latest
     steps:
-      - uses: Labtech-DevOps/cookiecutter-gha@v1.0.0
+      - uses: Labtech-DevOps/cookiecutter-gha@v1.1.1
         id: scaff
         with:
           portClientId: ${{ secrets.PORT_CLIENT_ID }}
