@@ -19,7 +19,7 @@ jobs:
       ORG_NAME: Labtech-DevOps
     runs-on: ubuntu-latest
     steps:
-      - uses: Labtech-DevOps/gha-terraform-network
+      - uses: Labtech-DevOps/gha-terraform-network@main
         id: scaff
         with:
           portClientId: ${{ secrets.PORT_CLIENT_ID }}
