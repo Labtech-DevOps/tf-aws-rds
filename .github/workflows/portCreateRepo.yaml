@@ -28,6 +28,6 @@ jobs:
           portRunId: ${{ fromJson(inputs.port_payload).context.runId }}
           repositoryName: ${{ fromJson(inputs.port_payload).payload.properties.service_name }}
           portUserInputs: '{"cookiecutter_project_name": "${{ fromJson(inputs.port_payload).payload.properties.service_name }}" }'
-          cookiecutterTemplate: https://github.com/Labtech-DevOps/gha-terraform-network
+          cookiecutterTemplate: https://github.com/Labtech-DevOps/cookiecutter-tf-network
           blueprintIdentifier: "service"
           organizationName: ${{ env.ORG_NAME }}
