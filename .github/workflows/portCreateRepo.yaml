@@ -32,8 +32,7 @@ jobs:
           token: ${{ secrets.ORG_ADMIN_TOKEN }}
           portRunId: ${{ fromJson(inputs.port_payload).context.runId }}
           repositoryName: ${{ fromJson(inputs.port_payload).payload.properties.project_name }}
-          portUserInputs: 
-          '{
+          portUserInputs: '{
           "cookiecutter_project_name": ${{ fromJson(inputs.port_payload).payload.properties.project_name }},
           "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.region }},
           "name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }},
