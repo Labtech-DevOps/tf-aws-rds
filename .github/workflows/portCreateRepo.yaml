@@ -34,7 +34,7 @@ jobs:
           repositoryName: ${{ fromJson(inputs.port_payload).payload.properties.project_name }}
           portUserInputs: '{
           "cookiecutter_project_name": ${{ fromJson(inputs.port_payload).payload.properties.project_name }},
-          "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.region }},
+          "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.aws_region }},
           "name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }},
           "block_cidr": ${{ fromJson(inputs.port_payload).payload.properties.block_cidr }},
           "availability_zone": ${{ fromJson(inputs.port_payload).payload.properties.azs }},
