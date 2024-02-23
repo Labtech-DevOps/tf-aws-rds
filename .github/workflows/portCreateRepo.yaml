@@ -34,9 +34,15 @@ jobs:
           repositoryName: ${{ fromJson(inputs.port_payload).payload.properties.project_name }}
           portUserInputs: '{
           "cookiecutter_project_name": ${{ fromJson(inputs.port_payload).payload.properties.project_name }} ,
-          "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.aws_region }},
-          "name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }}
-          }'
+          "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.region }},
+          "name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }},
+          "block_cidr": ${{ fromJson(inputs.port_payload).payload.properties.block_cidr }},
+          "availability_zone": ${{ fromJson(inputs.port_payload).payload.properties.azs }},
+          "private_subnets": ${{ fromJson(inputs.port_payload).payload.properties.private_subnets }},
+          "public_subnets": ${{ fromJson(inputs.port_payload).payload.properties.public_subnets }},
+          "enable_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_nat_gateway }},
+          "single_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.single_nat_gateway }},
+          "enable_vpn_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_vpn_gateway }}}'
           cookiecutterTemplate: https://github.com/Labtech-DevOps/cookiecutter-tf-network.git
           blueprintIdentifier: "service"
           organizationName: ${{ env.ORG_NAME }}
