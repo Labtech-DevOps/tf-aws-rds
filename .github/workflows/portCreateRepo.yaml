@@ -33,16 +33,16 @@ jobs:
           portRunId: ${{ fromJson(inputs.port_payload).context.runId }}
           repositoryName: ${{ fromJson(inputs.port_payload).payload.properties.project_name }}
           portUserInputs: '{
-          "cookiecutter_project_name": ${{ fromJson(inputs.port_payload).payload.properties.project_name }},
-          "cookiecutter_aws_region": ${{ fromJson(inputs.port_payload).payload.properties.aws_region }},
-          "cookiecutter_name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }},
-          "cookiecutter_block_cidr": ${{ fromJson(inputs.port_payload).payload.properties.block_cidr }},
-          "cookiecutter_availability_zone": ${{ fromJson(inputs.port_payload).payload.properties.availability_zone }},
-          "cookiecutter_private_subnets": ${{ fromJson(inputs.port_payload).payload.properties.private_subnets }},
-          "cookiecutter_public_subnets": ${{ fromJson(inputs.port_payload).payload.properties.public_subnets }},
-          "cookiecutter_enable_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_nat_gateway }},
-          "cookiecutter_single_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.single_nat_gateway }},
-          "cookiecutter_enable_vpn_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_vpn_gateway }}
+          "project_name": ${{ fromJson(inputs.port_payload).payload.properties.project_name }},
+          "aws_region": ${{ fromJson(inputs.port_payload).payload.properties.aws_region }},
+          "name_vpc": ${{ fromJson(inputs.port_payload).payload.properties.name_vpc }},
+          "block_cidr": ${{ fromJson(inputs.port_payload).payload.properties.block_cidr }},
+          "availability_zone": ${{ fromJson(inputs.port_payload).payload.properties.availability_zone }},
+          "private_subnets": ${{ fromJson(inputs.port_payload).payload.properties.private_subnets }},
+          "public_subnets": ${{ fromJson(inputs.port_payload).payload.properties.public_subnets }},
+          "enable_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_nat_gateway }},
+          "single_nat_gateway": ${{ fromJson(inputs.port_payload).payload.properties.single_nat_gateway }},
+          "enable_vpn_gateway": ${{ fromJson(inputs.port_payload).payload.properties.enable_vpn_gateway }}
           }'
           cookiecutterTemplate: https://github.com/Labtech-DevOps/cookiecutter-tf-network.git
           blueprintIdentifier: "service"
